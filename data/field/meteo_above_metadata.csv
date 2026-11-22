@@ -1,0 +1,9 @@
+messvar_id,installation_name,variable_id,varname_name,varunit_symbol,varvpos,scaffold,treatment,sensor_id,imp_name
+6,Pfynwald TW 8,8,Air temperature,degC,12,8,irrigation_stop,3,TA_oc
+10,Pfynwald TW 8,7,Air relative humidity,%,12,8,irrigation_stop,3,RH_oc
+14,Pfynwald TW 8,9,Atmospheric vapour pressure deficit,kPa,12,8,irrigation_stop,7,VPD_oc
+18,Pfynwald TW 8,27,Wind speed,m/s,13.5,8,irrigation_stop,8,WS_oc
+22,Pfynwald TW 8,24,Wind direction,deg,13.5,8,irrigation_stop,8,WD_oc
+34,Pfynwald TW 8,17,Radiation shortwave incoming,W/m2,12,8,irrigation_stop,12,GlobalRad_oc
+48,Pfynwald TW 8,14,Photosynthetic photon flux density,µmol/s/m2,12,8,irrigation_stop,16,PAR_oc
+54,Pfynwald TW 8,1,Atmospheric precipitation,mm,12,8,irrigation_stop,17,RaineH3_amount_dif

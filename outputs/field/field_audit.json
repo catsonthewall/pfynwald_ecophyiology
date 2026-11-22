@@ -1,0 +1,413 @@
+{
+  "purpose": "Reproducible exploratory processing, not a validated drought-effect experiment",
+  "subset_hash_checks": [
+    {
+      "file": "canopy_20240715_20240721.csv",
+      "sha256": "ee0541aefcd05fcb0b42eab38c2ffaad3081b9f383ab8619bdf82f80ff68df14",
+      "matches_bundled_manifest": true
+    },
+    {
+      "file": "meteo_above_20240715_20240721.csv",
+      "sha256": "4f5cc595daefd45ba8552902e27943f4929f4e67a1f428a722e77b51cb2caa94",
+      "matches_bundled_manifest": true
+    },
+    {
+      "file": "meteo_inside_20240715_20240721.csv",
+      "sha256": "9a33b1d179bbdf1ef0dad3e183e9dc1745ff95e5f1808cced1525782aab224d3",
+      "matches_bundled_manifest": true
+    },
+    {
+      "file": "leaf_water_optional_20240715_20240721.csv",
+      "sha256": "96769cccaf16dfeded7cc1bfe0e364d007f85b950aac0a429a9331c3a5857423",
+      "matches_bundled_manifest": true
+    }
+  ],
+  "input_files": [
+    {
+      "file": "canopy_20240715_20240721.csv",
+      "bytes": 830621,
+      "sha256": "ee0541aefcd05fcb0b42eab38c2ffaad3081b9f383ab8619bdf82f80ff68df14"
+    },
+    {
+      "file": "canopy_metadata.csv",
+      "bytes": 1725,
+      "sha256": "b23ee1931a20fc50e604de64b0ccfe2ac86d31ec7b8899712a1ef395533e0756"
+    },
+    {
+      "file": "leaf_water_optional_20240715_20240721.csv",
+      "bytes": 11806,
+      "sha256": "96769cccaf16dfeded7cc1bfe0e364d007f85b950aac0a429a9331c3a5857423"
+    },
+    {
+      "file": "leaf_water_optional_metadata.csv",
+      "bytes": 6345,
+      "sha256": "bef59f027d0cf7b0effd995764a5426573c7d60987173c058d6a9661945e7bae"
+    },
+    {
+      "file": "meteo_above_20240715_20240721.csv",
+      "bytes": 4221226,
+      "sha256": "4f5cc595daefd45ba8552902e27943f4929f4e67a1f428a722e77b51cb2caa94"
+    },
+    {
+      "file": "meteo_above_metadata.csv",
+      "bytes": 759,
+      "sha256": "d4856ee21f28b78067e20ee8fa18d7d6899bea82023dbd8d5f09c22abc195538"
+    },
+    {
+      "file": "meteo_inside_20240715_20240721.csv",
+      "bytes": 4908345,
+      "sha256": "9a33b1d179bbdf1ef0dad3e183e9dc1745ff95e5f1808cced1525782aab224d3"
+    },
+    {
+      "file": "meteo_inside_metadata.csv",
+      "bytes": 735,
+      "sha256": "144cc2a3b74228dec85a5b91536420b1def7e27b05d04cbdd53650fa7de20e8f"
+    }
+  ],
+  "sources": {
+    "canopy": "https://doi.org/10.16904/envidat.776",
+    "meteorology": "https://doi.org/10.16904/envidat.798",
+    "leaf": "https://doi.org/10.16904/envidat.799"
+  },
+  "license": "CC-BY-4.0; original authors and original subset manifest retained",
+  "software": {
+    "pandas": "2.2.3",
+    "numpy": "2.3.5"
+  },
+  "raw_quality": {
+    "canopy": {
+      "rows": 15120,
+      "quality_flags": {
+        "good": 15056,
+        "outlier": 64
+      },
+      "value_types": {
+        "observed": 15120
+      },
+      "first_source_timestamp": "2024-07-15 00:00:00",
+      "last_source_timestamp": "2024-07-21 23:50:00"
+    },
+    "meteo_above": {
+      "rows": 80640,
+      "quality_flags": {
+        "1": 80640
+      },
+      "value_types": {
+        "observed": 76701,
+        "corrected": 3939
+      },
+      "first_source_timestamp": "2024-07-15 00:00:00",
+      "last_source_timestamp": "2024-07-21 23:59:00"
+    },
+    "meteo_inside": {
+      "rows": 90720,
+      "quality_flags": {
+        "1": 89983,
+        "2": 737
+      },
+      "value_types": {
+        "derived": 90720
+      },
+      "first_source_timestamp": "2024-07-15 00:00:00",
+      "last_source_timestamp": "2024-07-21 23:59:00"
+    },
+    "leaf": {
+      "rows": 280,
+      "quality_flags": {
+        "not_provided": 280
+      },
+      "value_types": {
+        "observed": 280
+      },
+      "first_source_timestamp": "2024-07-16 05:00:00",
+      "last_source_timestamp": "2024-07-21 14:00:00"
+    }
+  },
+  "canopy_quality_by_measurement": [
+    {
+      "messvar_id": 5425,
+      "quality_flag": "good",
+      "rows": 1008
+    },
+    {
+      "messvar_id": 5654,
+      "quality_flag": "good",
+      "rows": 1008
+    },
+    {
+      "messvar_id": 5838,
+      "quality_flag": "good",
+      "rows": 1008
+    },
+    {
+      "messvar_id": 6014,
+      "quality_flag": "good",
+      "rows": 1008
+    },
+    {
+      "messvar_id": 6182,
+      "quality_flag": "good",
+      "rows": 1007
+    },
+    {
+      "messvar_id": 6182,
+      "quality_flag": "outlier",
+      "rows": 1
+    },
+    {
+      "messvar_id": 6350,
+      "quality_flag": "good",
+      "rows": 1008
+    },
+    {
+      "messvar_id": 6542,
+      "quality_flag": "good",
+      "rows": 1004
+    },
+    {
+      "messvar_id": 6542,
+      "quality_flag": "outlier",
+      "rows": 4
+    },
+    {
+      "messvar_id": 6756,
+      "quality_flag": "good",
+      "rows": 1008
+    },
+    {
+      "messvar_id": 6970,
+      "quality_flag": "good",
+      "rows": 1008
+    },
+    {
+      "messvar_id": 7184,
+      "quality_flag": "good",
+      "rows": 953
+    },
+    {
+      "messvar_id": 7184,
+      "quality_flag": "outlier",
+      "rows": 55
+    },
+    {
+      "messvar_id": 7398,
+      "quality_flag": "good",
+      "rows": 1008
+    },
+    {
+      "messvar_id": 7594,
+      "quality_flag": "good",
+      "rows": 1008
+    },
+    {
+      "messvar_id": 7774,
+      "quality_flag": "good",
+      "rows": 1008
+    },
+    {
+      "messvar_id": 7954,
+      "quality_flag": "good",
+      "rows": 1004
+    },
+    {
+      "messvar_id": 7954,
+      "quality_flag": "outlier",
+      "rows": 4
+    },
+    {
+      "messvar_id": 8582,
+      "quality_flag": "good",
+      "rows": 1008
+    }
+  ],
+  "meteorology_processing": {
+    "above": {
+      "quality_by_variable": [
+        {
+          "imp_name": "GlobalRad_oc",
+          "quality_flag": 1,
+          "valtype": "corrected",
+          "rows": 3939
+        },
+        {
+          "imp_name": "GlobalRad_oc",
+          "quality_flag": 1,
+          "valtype": "observed",
+          "rows": 6141
+        },
+        {
+          "imp_name": "PAR_oc",
+          "quality_flag": 1,
+          "valtype": "observed",
+          "rows": 10080
+        },
+        {
+          "imp_name": "RH_oc",
+          "quality_flag": 1,
+          "valtype": "observed",
+          "rows": 10080
+        },
+        {
+          "imp_name": "RaineH3_amount_dif",
+          "quality_flag": 1,
+          "valtype": "observed",
+          "rows": 10080
+        },
+        {
+          "imp_name": "TA_oc",
+          "quality_flag": 1,
+          "valtype": "observed",
+          "rows": 10080
+        },
+        {
+          "imp_name": "VPD_oc",
+          "quality_flag": 1,
+          "valtype": "observed",
+          "rows": 10080
+        },
+        {
+          "imp_name": "WD_oc",
+          "quality_flag": 1,
+          "valtype": "observed",
+          "rows": 10080
+        },
+        {
+          "imp_name": "WS_oc",
+          "quality_flag": 1,
+          "valtype": "observed",
+          "rows": 10080
+        }
+      ],
+      "accepted_source_rows": 80640,
+      "rejected_source_rows": 0,
+      "incomplete_variable_bins": 0
+    },
+    "inside": {
+      "quality_by_variable": [
+        {
+          "imp_name": "OPERATION_STATUS",
+          "quality_flag": 1,
+          "valtype": "derived",
+          "rows": 9343
+        },
+        {
+          "imp_name": "OPERATION_STATUS",
+          "quality_flag": 2,
+          "valtype": "derived",
+          "rows": 737
+        },
+        {
+          "imp_name": "RH_ic_amb",
+          "quality_flag": 1,
+          "valtype": "derived",
+          "rows": 10080
+        },
+        {
+          "imp_name": "RH_ic_manip",
+          "quality_flag": 1,
+          "valtype": "derived",
+          "rows": 10080
+        },
+        {
+          "imp_name": "TA_ic_amb",
+          "quality_flag": 1,
+          "valtype": "derived",
+          "rows": 10080
+        },
+        {
+          "imp_name": "TA_ic_manip",
+          "quality_flag": 1,
+          "valtype": "derived",
+          "rows": 10080
+        },
+        {
+          "imp_name": "VPD_ic_amb",
+          "quality_flag": 1,
+          "valtype": "derived",
+          "rows": 10080
+        },
+        {
+          "imp_name": "VPD_ic_manip",
+          "quality_flag": 1,
+          "valtype": "derived",
+          "rows": 10080
+        },
+        {
+          "imp_name": "WD_ic",
+          "quality_flag": 1,
+          "valtype": "derived",
+          "rows": 10080
+        },
+        {
+          "imp_name": "WS_ic",
+          "quality_flag": 1,
+          "valtype": "derived",
+          "rows": 10080
+        }
+      ],
+      "accepted_source_rows": 89983,
+      "rejected_source_rows": 737,
+      "incomplete_variable_bins": 39
+    }
+  },
+  "rules": {
+    "canopy": "Keep quality_flag good only. Raw outlier/bad rows remain in input files. No interpolation.",
+    "meteorology": "Keep quality_flag 1 and observed/corrected/derived values; exclude estimates. Mean TA/RH/VPD/radiation/wind speed; sum rainfall; circular mean wind direction; mean operation status is an operating fraction.",
+    "minimum_minutes_per_10min_bin": 8,
+    "bin_convention": "Floor 1-minute meteorology to left-labelled 10-minute source-clock bins. Canopy export interval convention unresolved; temporal alignment is provisional.",
+    "source_clock": "Naive source time preserved. Same-clock joining is an assumption. Do not label UTC or Europe/Zurich without confirmation.",
+    "within_air_mapping": {
+      "control": "amb",
+      "irrigation": "amb",
+      "roof": "amb",
+      "irrigation_vpd": "manip",
+      "roof_vpd": "manip"
+    },
+    "spatial_air_reference": "Inside air variables are spatially aggregated amb/manip groups, not per-crown measurements. Above-canopy station is Pfynwald TW8; metadata irrigation_stop is station context, not an extra treatment replicate.",
+    "joins": "Canopy many-to-one by source_time_naive to unique meteorology bins; canopy metadata many-to-one by messvar_id. No scaffold cross-join and no invented plot ID.",
+    "VPD_comparison": "Reported VPD is retained. FAO estimate uses aggregated 10-minute TA and RH; nonlinear averaging and the source calculation method may explain small differences.",
+    "radiation_filter_W_m2": 200.0,
+    "radiation_filter_status": "Analyst-selected illustrative threshold, not a universal daylight or drought boundary.",
+    "satellite_windows": {
+      "events_utc": {
+        "Sentinel2_20240719": "2024-07-19T10:20:21.024000Z",
+        "Landsat8_20240721": "2024-07-21T10:16:29.731228Z"
+      },
+      "assumed_common_field_clock_offsets_hours": [
+        0,
+        1,
+        2
+      ],
+      "half_width_minutes": 15,
+      "meaning": "Alternative hypotheses only. They neither establish the timezone nor validate the satellite pixel. Crown footprints and treatment polygons are unavailable."
+    },
+    "physiology": "Only water-potential variables exist in supplied 2024 export. Convert bar to MPa by multiplying by0.1; preserve sign. Do not call this gas-exchange or stomatal-conductance data."
+  },
+  "limitations": [
+    "15 radiometers/scaffolds are repeated measurement units, not15 independent plot-level treatment replicates. Each radiometer views one or two crowns.",
+    "No verified crown coordinates, footprints, plot-level hierarchy, or treatment polygons supplied.",
+    "No soil water measurements supplied; treatment label is not measured soil moisture.",
+    "Leaf export includes roof_vpd although generic2024 protocol lists only three treatments; preserve discrepancy.",
+    "The seven-day interval was chosen before treatment-effect analysis; it cannot establish seasonal drought vulnerability.",
+    "Satellite cloud contamination, spatial support mismatch and unresolved clocks preclude a formal validation claim."
+  ],
+  "outputs": {
+    "good_canopy_rows": 15056,
+    "n_canopy_measurement_variables": 15,
+    "n_scaffolds": 15,
+    "n_treatments": 5,
+    "n_dates": 7,
+    "overpass_scaffold_scenario_rows": 90,
+    "leaf_rows": 280
+  },
+  "leaf_variables": [
+    "day leaf water potential",
+    "predawn leaf water potential"
+  ],
+  "leaf_treatments": [
+    "irrigation",
+    "irrigation_vpd",
+    "roof",
+    "roof_vpd"
+  ]
+}

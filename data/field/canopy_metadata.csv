@@ -1,0 +1,16 @@
+messvar_id,installation_name,variable_id,varname_name,varunit_symbol,varvpos,scaffold,treatment,tree_id,species,dbh,height,sensor_id,imp_name
+5425,PFY_SC14,245,Canopy temperature,degC,14,14,irrigation_vpd,800,Pinus sylvestris,25.8,NA,4518,IRtemp_1_Avg
+5654,PFY_SC1,245,Canopy temperature,degC,9.5,1,control,40,Pinus sylvestris,18.9,NA,4544,IRtemp_1_Avg
+5838,PFY_SC701,245,Canopy temperature,degC,12,701,control,604,Pinus sylvestris,36.2,12.2,4561,IRtemp_1_Avg
+6014,PFY_SC3,245,Canopy temperature,degC,12.5,3,irrigation,236,Pinus sylvestris,15.2,NA,4576,IRtemp_1_Avg
+6182,PFY_SC4,245,Canopy temperature,degC,12,4,irrigation,391,Pinus sylvestris,32,13.2,4591,IRtemp_1_Avg
+6350,PFY_SC901,245,Canopy temperature,degC,12.5,901,irrigation,755,Pinus sylvestris,23.9,NA,4771,IRtemp_1_Avg
+6542,PFY_SC6,245,Canopy temperature,degC,10.5,6,roof_vpd,469,Pinus sylvestris,24.4,NA,4609,IRtemp_1_Avg
+6756,PFY_SC12,245,Canopy temperature,degC,12,12,roof_vpd,671,Pinus sylvestris,30,NA,4627,IRtemp_1_Avg
+6970,PFY_SC16,245,Canopy temperature,degC,12,16,roof_vpd,914,Pinus sylvestris,18.4,NA,4646,IRtemp_1_Avg
+7184,PFY_SC10,245,Canopy temperature,degC,12,10,irrigation_vpd,332,Pinus sylvestris,35.3,NA,4665,IRtemp_1_Avg
+7398,PFY_SC15,245,Canopy temperature,degC,12.5,15,irrigation_vpd,937,Pinus sylvestris,33.5,NA,4682,IRtemp_1_Avg
+7594,PFY_SC11,245,Canopy temperature,degC,11.5,11,roof,572,Pinus sylvestris,25.8,12.5,4702,IRtemp_1_Avg
+7774,PFY_SC13,245,Canopy temperature,degC,12.5,13,roof,712,Pinus sylvestris,27.8,13.9,4718,IRtemp_1_Avg
+7954,PFY_SC17,245,Canopy temperature,degC,10.5,17,roof,1085,Pinus sylvestris,32,NA,4734,IRtemp_1_Avg
+8582,PFY_SC18,245,Canopy temperature,degC,11,18,control,1039,Pinus sylvestris,28.4,13,4750,IRtemp_1_Avg

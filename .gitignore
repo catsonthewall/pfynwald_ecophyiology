@@ -1,0 +1,29 @@
+# Local Python environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python and notebook caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+
+# Local editor and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local environment configuration
+.env
+.env.*
+!.env.example
+
+# Supplied data/, outputs/ and docs/ are intentionally tracked.

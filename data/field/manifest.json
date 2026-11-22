@@ -1,0 +1,118 @@
+{
+  "created_utc": "2026-11-12T14:01:54.407851+00:00",
+  "purpose": "Offline learning subset; not a completed scientific analysis",
+  "period": {
+    "start_inclusive_as_provided": "2024-07-15 00:00:00",
+    "end_exclusive_as_provided": "2024-07-22 00:00:00"
+  },
+  "selection": "Fixed mid-July week selected for manageable size and overlapping instrument coverage, not by treatment contrasts or effect size. Other fixed July/August weeks were inspected only for coverage. All selected rows including QC flags retained.",
+  "timestamp_policy": "Preserve naive source messtime strings. Included canopy/meteorology/leaf metadata does not explicitly state timezone; cross-stream clock equivalence is provisional and must be confirmed before formal time-matched inference. Do not silently localize to UTC or Europe/Zurich. TreeNet is NOT included and its separately documented clock is fixed CET UTC+1 without DST.",
+  "license": "CC-BY-4.0; attribute original dataset creators and DOIs",
+  "geography": "Included meteorology/leaf README approximate site centroid 46.302N,7.612E,~615m; no precise crown XY or treatment polygons in these files.",
+  "experimental_units": "Canopy has15sensors (one or two crowns each),3scaffolds per5treatments. Sensor/time counts are not independent ecological replication; treatment design and experimental plot hierarchy need verification.",
+  "datasets": [
+    {
+      "label": "canopy",
+      "doi": "10.16904/envidat.776",
+      "landing_url": "https://doi.org/10.16904/envidat.776",
+      "source_resource_name": "pfynwald_vpdrought_canopy_temperature_10min_2024.zip",
+      "source_resource_url": "https://www.envidat.ch/dataset/a585bca2-a5e2-4810-b9a8-e831fdc7aebd/resource/212221fb-14a0-4157-97e9-1670e221959d/download/pfynwald_vpdrought_canopy_temperature_10min_2024.zip",
+      "source_license": "Creative Commons Attribution (CC-BY 4.0)",
+      "source_zip_bytes": 5872908,
+      "source_zip_sha256": "800cdab6056c500672f5fe6178e186276f4c75bc42f098c721ba815337c21f5e",
+      "source_member": "pfynwald_vpdrought_canopy_temperature_10min_2024/pfynwald_vpdrought_canopy_temperature_10min_2024.txt",
+      "subset_file": "canopy_20240715_20240721.csv",
+      "subset_bytes": 830621,
+      "subset_sha256": "ee0541aefcd05fcb0b42eab38c2ffaad3081b9f383ab8619bdf82f80ff68df14",
+      "rows": 15120,
+      "unique_measurement_ids": 15,
+      "timestamp_min": "2024-07-15 00:00:00",
+      "timestamp_max": "2024-07-21 23:50:00",
+      "quality_flag_counts": {
+        "good": 15056,
+        "outlier": 64
+      },
+      "valtype_counts": {
+        "observed": 15120
+      },
+      "metadata_file": "canopy_metadata.csv"
+    },
+    {
+      "label": "meteo_above",
+      "doi": "10.16904/envidat.798",
+      "landing_url": "https://doi.org/10.16904/envidat.798",
+      "source_resource_name": "pfynwald_vpdrought_meteorology_oc_2024.zip",
+      "source_resource_url": "https://www.envidat.ch/dataset/a9e59004-9655-4507-95ac-7db9345309e0/resource/3d4822ac-4fe2-4c94-8904-6412eec60785/download/pfynwald_vpdrought_meteorology_oc_2024.zip",
+      "source_license": "Creative Commons Attribution (CC-BY 4.0)",
+      "source_zip_bytes": 17807136,
+      "source_zip_sha256": "a758f19d1621625112bf1f8b309670b80ee00bc212854165923517f05f78b086",
+      "source_member": "pfynwald_vpdrought_meteorology_oc_2024/pfynwald_vpdrought_meteorology_oc_2024.txt",
+      "subset_file": "meteo_above_20240715_20240721.csv",
+      "subset_bytes": 4221226,
+      "subset_sha256": "4f5cc595daefd45ba8552902e27943f4929f4e67a1f428a722e77b51cb2caa94",
+      "rows": 80640,
+      "unique_measurement_ids": 8,
+      "timestamp_min": "2024-07-15 00:00:00",
+      "timestamp_max": "2024-07-21 23:59:00",
+      "quality_flag_counts": {
+        "1": 80640
+      },
+      "valtype_counts": {
+        "observed": 76701,
+        "corrected": 3939
+      },
+      "metadata_file": "meteo_above_metadata.csv"
+    },
+    {
+      "label": "meteo_inside",
+      "doi": "10.16904/envidat.798",
+      "landing_url": "https://doi.org/10.16904/envidat.798",
+      "source_resource_name": "pfynwald_vpdrought_meteorology_ic_2024.zip",
+      "source_resource_url": "https://www.envidat.ch/dataset/a9e59004-9655-4507-95ac-7db9345309e0/resource/c251e9b2-4dcd-453c-a164-fda0dce7ec7a/download/pfynwald_vpdrought_meteorology_ic_2024.zip",
+      "source_license": "Creative Commons Attribution (CC-BY 4.0)",
+      "source_zip_bytes": 19799175,
+      "source_zip_sha256": "dab68488bd23f5aefcbc00441874ce92f3e564c07f835fb8400aa379572d2e15",
+      "source_member": "pfynwald_vpdrought_meteorology_ic_2024/pfynwald_vpdrought_meteorology_ic_2024.txt",
+      "subset_file": "meteo_inside_20240715_20240721.csv",
+      "subset_bytes": 4908345,
+      "subset_sha256": "9a33b1d179bbdf1ef0dad3e183e9dc1745ff95e5f1808cced1525782aab224d3",
+      "rows": 90720,
+      "unique_measurement_ids": 9,
+      "timestamp_min": "2024-07-15 00:00:00",
+      "timestamp_max": "2024-07-21 23:59:00",
+      "quality_flag_counts": {
+        "1": 89983,
+        "2": 737
+      },
+      "valtype_counts": {
+        "derived": 90720
+      },
+      "metadata_file": "meteo_inside_metadata.csv"
+    },
+    {
+      "label": "leaf_water_optional",
+      "doi": "10.16904/envidat.799",
+      "landing_url": "https://doi.org/10.16904/envidat.799",
+      "source_resource_name": "pfynwald_vpdrought_gas_waterpotential_2024.zip",
+      "source_resource_url": "https://www.envidat.ch/dataset/47c173b8-dbc3-481b-9da8-666f0a157a35/resource/f867696c-096d-4592-9248-b08982254b19/download/pfynwald_vpdrought_gas_waterpotential_2024.zip",
+      "source_license": "Creative Commons Attribution (CC-BY 4.0)",
+      "source_zip_bytes": 25966,
+      "source_zip_sha256": "46c838b4e12e0d1b1d1fa86c3d78f8464eab906146f73e78e5bf7d0a092bac72",
+      "source_member": "pfynwald_vpdrought_gas_waterpotential_2024/pfynwald_vpdrought_gas_waterpotential_2024.txt",
+      "subset_file": "leaf_water_optional_20240715_20240721.csv",
+      "subset_bytes": 11806,
+      "subset_sha256": "96769cccaf16dfeded7cc1bfe0e364d007f85b950aac0a429a9331c3a5857423",
+      "rows": 280,
+      "unique_measurement_ids": 49,
+      "timestamp_min": "2024-07-16 05:00:00",
+      "timestamp_max": "2024-07-21 14:00:00",
+      "quality_flag_counts": {
+        "not_provided": 280
+      },
+      "valtype_counts": {
+        "observed": 280
+      },
+      "metadata_file": "leaf_water_optional_metadata.csv"
+    }
+  ]
+}

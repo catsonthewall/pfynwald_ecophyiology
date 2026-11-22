@@ -1,0 +1,33 @@
+stream,messvar_id,installation_name,variable_id,varname_name,varunit_symbol,varvpos,scaffold,treatment,tree_id,species,dbh,height,sensor_id,imp_name
+canopy,5425,PFY_SC14,245,Canopy temperature,degC,14.0,14.0,irrigation_vpd,800.0,Pinus sylvestris,25.8,,4518.0,IRtemp_1_Avg
+canopy,5654,PFY_SC1,245,Canopy temperature,degC,9.5,1.0,control,40.0,Pinus sylvestris,18.9,,4544.0,IRtemp_1_Avg
+canopy,5838,PFY_SC701,245,Canopy temperature,degC,12.0,701.0,control,604.0,Pinus sylvestris,36.2,12.2,4561.0,IRtemp_1_Avg
+canopy,6014,PFY_SC3,245,Canopy temperature,degC,12.5,3.0,irrigation,236.0,Pinus sylvestris,15.2,,4576.0,IRtemp_1_Avg
+canopy,6182,PFY_SC4,245,Canopy temperature,degC,12.0,4.0,irrigation,391.0,Pinus sylvestris,32.0,13.2,4591.0,IRtemp_1_Avg
+canopy,6350,PFY_SC901,245,Canopy temperature,degC,12.5,901.0,irrigation,755.0,Pinus sylvestris,23.9,,4771.0,IRtemp_1_Avg
+canopy,6542,PFY_SC6,245,Canopy temperature,degC,10.5,6.0,roof_vpd,469.0,Pinus sylvestris,24.4,,4609.0,IRtemp_1_Avg
+canopy,6756,PFY_SC12,245,Canopy temperature,degC,12.0,12.0,roof_vpd,671.0,Pinus sylvestris,30.0,,4627.0,IRtemp_1_Avg
+canopy,6970,PFY_SC16,245,Canopy temperature,degC,12.0,16.0,roof_vpd,914.0,Pinus sylvestris,18.4,,4646.0,IRtemp_1_Avg
+canopy,7184,PFY_SC10,245,Canopy temperature,degC,12.0,10.0,irrigation_vpd,332.0,Pinus sylvestris,35.3,,4665.0,IRtemp_1_Avg
+canopy,7398,PFY_SC15,245,Canopy temperature,degC,12.5,15.0,irrigation_vpd,937.0,Pinus sylvestris,33.5,,4682.0,IRtemp_1_Avg
+canopy,7594,PFY_SC11,245,Canopy temperature,degC,11.5,11.0,roof,572.0,Pinus sylvestris,25.8,12.5,4702.0,IRtemp_1_Avg
+canopy,7774,PFY_SC13,245,Canopy temperature,degC,12.5,13.0,roof,712.0,Pinus sylvestris,27.8,13.9,4718.0,IRtemp_1_Avg
+canopy,7954,PFY_SC17,245,Canopy temperature,degC,10.5,17.0,roof,1085.0,Pinus sylvestris,32.0,,4734.0,IRtemp_1_Avg
+canopy,8582,PFY_SC18,245,Canopy temperature,degC,11.0,18.0,control,1039.0,Pinus sylvestris,28.4,13.0,4750.0,IRtemp_1_Avg
+meteo_above,6,Pfynwald TW 8,8,Air temperature,degC,12.0,8.0,irrigation_stop,,,,,3.0,TA_oc
+meteo_above,10,Pfynwald TW 8,7,Air relative humidity,%,12.0,8.0,irrigation_stop,,,,,3.0,RH_oc
+meteo_above,14,Pfynwald TW 8,9,Atmospheric vapour pressure deficit,kPa,12.0,8.0,irrigation_stop,,,,,7.0,VPD_oc
+meteo_above,18,Pfynwald TW 8,27,Wind speed,m/s,13.5,8.0,irrigation_stop,,,,,8.0,WS_oc
+meteo_above,22,Pfynwald TW 8,24,Wind direction,deg,13.5,8.0,irrigation_stop,,,,,8.0,WD_oc
+meteo_above,34,Pfynwald TW 8,17,Radiation shortwave incoming,W/m2,12.0,8.0,irrigation_stop,,,,,12.0,GlobalRad_oc
+meteo_above,48,Pfynwald TW 8,14,Photosynthetic photon flux density,µmol/s/m2,12.0,8.0,irrigation_stop,,,,,16.0,PAR_oc
+meteo_above,54,Pfynwald TW 8,1,Atmospheric precipitation,mm,12.0,8.0,irrigation_stop,,,,,17.0,RaineH3_amount_dif
+meteo_inside,11569,Pfynwald,319,System operation status,number,-10.0,,,,,,,,OPERATION_STATUS
+meteo_inside,11570,Pfynwald,314,Air relative humidity,%,-10.0,,,,,,,,RH_ic_amb
+meteo_inside,11571,Pfynwald,314,Air relative humidity,%,-10.0,,,,,,,,RH_ic_manip
+meteo_inside,11572,Pfynwald,315,Air temperature,degC,-10.0,,,,,,,,TA_ic_amb
+meteo_inside,11573,Pfynwald,315,Air temperature,degC,-10.0,,,,,,,,TA_ic_manip
+meteo_inside,11574,Pfynwald,316,Atmospheric vapour pressure deficit,kPa,-10.0,,,,,,,,VPD_ic_amb
+meteo_inside,11575,Pfynwald,316,Atmospheric vapour pressure deficit,kPa,-10.0,,,,,,,,VPD_ic_manip
+meteo_inside,11576,Pfynwald,317,Wind direction,deg,-10.0,,,,,,,,WD_ic
+meteo_inside,11577,Pfynwald,318,Wind speed,m/s,-10.0,,,,,,,,WS_ic

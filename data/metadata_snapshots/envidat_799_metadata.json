@@ -1,0 +1,162 @@
+{
+  "help": "https://www.envidat.ch/api/3/action/help_show?name=package_show",
+  "success": true,
+  "result": {
+    "author": "[{\"given_name\": \"Giovanni\", \"name\": \"Bortolami\", \"email\": \"giovanni.bortolami@epfl.ch\", \"data_credit\": [], \"identifier_scheme\": \"\", \"identifier\": \"https://orcid.org/0000-0001-7528-9644\", \"affiliation\": \"Plant Ecology Research Laboratory, School of Architecture, Civil and Environmental Engineering, EPFL, Lausanne, Switzerland\"}, {\"given_name\": \"Arianna\", \"name\": \"Milano\", \"email\": \"arianna.milano@epfl.ch\", \"data_credit\": [], \"identifier_scheme\": \"\", \"identifier\": \"\", \"affiliation\": \"EPFL\"}, {\"given_name\": \"Jonas\", \"name\": \"Gisler\", \"email\": \"jonas.gisler@wsl.ch\", \"data_credit\": [], \"identifier_scheme\": \"\", \"identifier\": \"\", \"affiliation\": \"Swiss Federal Institute for Forest Snow and Landscape Research WSL, Zuercherstrasse 111, 8903 Birmensdorf, Switzerland\"}, {\"given_name\": \"Marcus\", \"name\": \"Schaub\", \"email\": \"marcus.schaub@wsl.ch\", \"data_credit\": [], \"identifier_scheme\": \"\", \"identifier\": \"0000-0002-0158-8892\", \"affiliation\": \"Swiss Federal Institute for Forest, Snow, and Landscape WSL, CH-8903, Birmensdorf, Switzerland\"}, {\"given_name\": \"Charlotte\", \"name\": \"Grossiord\", \"email\": \"charlotte.grossiord@wsl.ch\", \"data_credit\": [], \"identifier_scheme\": \"\", \"identifier\": \"0000-0002-9113-3671  \", \"affiliation\": \"Plant Ecology Research Laboratory, School of Architecture, Civil and Environmental Engineering, EPFL, Lausanne, Switzerland\"}]",
+    "author_email": null,
+    "creator_user_id": "7adc3018-86f4-481a-a55a-6f25a0dd3056",
+    "date": "[{\"date_type\":\"created\",\"date\":\"2024-01-01\",\"end_date\":\"2025-12-31\"},{\"date_type\":\"collected\",\"date\":\"2024-01-01\",\"end_date\":\"2025-09-30\"}]",
+    "doi": "10.16904/envidat.799",
+    "funding": "[{\"institution\":\"Swiss National Science Foundation (SNSF)\",\"grant_number\":\"206021_213382 / 1\",\"institution_url\":\"https://www.wsl.ch/en/projects/vpdrought/\"}]",
+    "id": "47c173b8-dbc3-481b-9da8-666f0a157a35",
+    "isopen": true,
+    "license_id": "cc-by",
+    "license_title": "Creative Commons Attribution (CC-BY 4.0)",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "maintainer": "{\"email\":\"giovanni.bortolami@epfl.ch\",\"given_name\":\"Giovanni\",\"name\":\"Bortolami\"}",
+    "maintainer_email": null,
+    "metadata_created": "2026-06-10T06:51:36.786850",
+    "metadata_modified": "2026-08-25T14:33:19.042233",
+    "name": "pfynwald-vpdrought-experiment-leaf-gas-exchange-and-water-potential-parameter",
+    "notes": "Data were collected in one-week campaigns every month (from May to September). The protocol slightly changed from 2024 to 2025. \n- In 2024, we followed n=2 scaffolds from the following treatments: irrigation-ambient VPD, irrigation-reduced VPD, roof-ambient VPD. We followed diurnals dynamics (every hour) from pre-dawn (~5 a.m.) to late afternoon (~5 p.m.) of leaf gas exchange (CO2 assimilation A, leaf transpiration E, leaf stomatal conductance gs) via a portable photosynthesis system LI-6800 (Li-cor). Ambient light, temperature, and relative humidity conditions were locally measured and set in the cuvette. The measurement was taken after 5 to 15 minutes adaptation. Every hour a branchlet (comprehending 1 and 2 years-old needles) was collected to measure leaf water potential.\n- In 2025,  we followed n=3 scaffolds from the following treatments: irrigation-ambient VPD, irrigation-reduced VPD, roof-ambient VPD, control. We measured leaf gas exchange twice a day using ambient temperature and relative humidity and saturated light conditions. We measured leaf water potential at pre-dawn, midday, and late afternoon.\n",
+    "num_resources": 2,
+    "num_tags": 8,
+    "organization": {
+      "id": "2a86e5bb-9735-4db3-a3e0-0979196bea1a",
+      "name": "pfynwald",
+      "title": "Pfynwald",
+      "type": "organization",
+      "description": "At the beginning of this century, numerous Scots pines in the Rhone Valley, one of the driest inner alpine valleys of the European Alps, situated between Brig and Sion (Canton Valais), started showing symptoms of drought. Many older trees had already died. To investigate the causes of the pine dieback, the WSL launched a long-term irrigation experiment in the Pfyn-Finges Nature Park in summer 2003. Since then, the WSL has been comparing the responses of several hundred Scots pines in irrigated forest plots with those of trees that continued to receive only the natural amount of precipitation.\r\n\r\nSince 2024, we have implemented an additional, world-wide unique approach to disentangle the processes affected by atmospheric and soil droughts. For more details, see VPDrought-Experiment.\r\n\r\n[here is the link](https://www.wsl.ch/de/ueber-die-wsl/versuchsanlagen-und-labors/flaechen-im-wald/die-forschungsplattform-pfynwald/)",
+      "image_url": "",
+      "created": "2026-04-09T08:06:02.775312",
+      "is_organization": true,
+      "approval_status": "approved",
+      "state": "active"
+    },
+    "owner_org": "2a86e5bb-9735-4db3-a3e0-0979196bea1a",
+    "private": false,
+    "publication": "{\"publisher\":\"EnviDat\",\"publication_year\":\"2026\"}",
+    "publication_state": "published",
+    "related_datasets": "- [Pfynwald long-term experimental irrigation site](https://www.doi.org/10.16904/envidat.599)\n- [Pfynwald VPDrought experiment atmospheric parameters and manipulations](https://www.doi.org/10.16904/envidat.798)\n- [Pfynwald VPDrought experiment stem radius changes (TreeNet)](https://www.doi.org/10.16904/envidat.751)\n- [Pfynwald VPDrought experiment sap flow parameters](https://www.doi.org/10.16904/envidat.750)\n- [Pfynwald VPDrought experiment soil parameters](https://www.doi.org/10.16904/envidat.775)\n- [Pfynwald VPDrought experiment canopy temperature parameter](https://www.doi.org/10.16904/envidat.776)",
+    "resource_type": "dataset",
+    "resource_type_general": "dataset",
+    "spatial": "{\"type\":\"GeometryCollection\",\"geometries\":[{\"type\":\"Point\",\"coordinates\":[7.6121082,46.3027884]}]}",
+    "state": "active",
+    "subtitle": "",
+    "title": "Pfynwald VPDrought experiment leaf gas exchange and water potential parameter",
+    "type": "dataset",
+    "url": null,
+    "version": "",
+    "resources": [
+      {
+        "cache_last_updated": null,
+        "cache_url": null,
+        "created": "2026-08-25T14:27:57.661867",
+        "description": "",
+        "doi": "",
+        "format": "ZIP",
+        "hash": "",
+        "id": "f867696c-096d-4592-9248-b08982254b19",
+        "last_modified": null,
+        "metadata_modified": "2026-08-25T14:27:57.643351",
+        "mimetype": "application/zip",
+        "mimetype_inner": "null",
+        "name": "pfynwald_vpdrought_gas_waterpotential_2024.zip",
+        "package_id": "47c173b8-dbc3-481b-9da8-666f0a157a35",
+        "position": 0,
+        "resource_size": "{\"size_units\":\"kb\",\"size_value\":\"\"}",
+        "resource_type": "null",
+        "restricted": "{\"level\": \"public\", \"allowed_users\": \"\"}",
+        "size": 25966,
+        "state": "active",
+        "url": "https://www.envidat.ch/dataset/47c173b8-dbc3-481b-9da8-666f0a157a35/resource/f867696c-096d-4592-9248-b08982254b19/download/pfynwald_vpdrought_gas_waterpotential_2024.zip",
+        "url_type": "upload"
+      },
+      {
+        "cache_last_updated": null,
+        "cache_url": null,
+        "created": "2026-08-25T14:28:10.979107",
+        "description": "",
+        "doi": "",
+        "format": "ZIP",
+        "hash": "",
+        "id": "76bad65c-bdc9-4eb5-9765-7e4cce9ffcf2",
+        "last_modified": null,
+        "metadata_modified": "2026-08-25T14:28:10.960028",
+        "mimetype": "application/zip",
+        "mimetype_inner": "null",
+        "name": "pfynwald_vpdrought_gas_waterpotential_2025.zip",
+        "package_id": "47c173b8-dbc3-481b-9da8-666f0a157a35",
+        "position": 1,
+        "resource_size": "{\"size_units\":\"kb\",\"size_value\":\"\"}",
+        "resource_type": "null",
+        "restricted": "{\"level\": \"public\", \"allowed_users\": \"\"}",
+        "size": 110896,
+        "state": "active",
+        "url": "https://www.envidat.ch/dataset/47c173b8-dbc3-481b-9da8-666f0a157a35/resource/76bad65c-bdc9-4eb5-9765-7e4cce9ffcf2/download/pfynwald_vpdrought_gas_waterpotential_2025.zip",
+        "url_type": "upload"
+      }
+    ],
+    "tags": [
+      {
+        "display_name": "DROUGHT",
+        "id": "5ff4196a-2dac-4204-b537-b3de8a55afe2",
+        "name": "DROUGHT",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "ECOPHYSIOLOGY",
+        "id": "6eacfa1a-2cb2-4a32-8728-bda8c2241931",
+        "name": "ECOPHYSIOLOGY",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "IRRIGATION",
+        "id": "1a648ed1-22b5-43f3-afb1-42a4a0dca95f",
+        "name": "IRRIGATION",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "LEAF GAS",
+        "id": "cce0c806-0fdc-4d2a-959f-249d1a46f7f5",
+        "name": "LEAF GAS",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "PFYNWALD",
+        "id": "a64b32a3-f62d-42e3-a216-7edf41398b0a",
+        "name": "PFYNWALD",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "PINUS SYLVESTRIS",
+        "id": "9ceddae3-18b3-4ba8-bcce-2ea3ce4a3bbe",
+        "name": "PINUS SYLVESTRIS",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "VPDROUGHT",
+        "id": "e8b13462-b140-4bde-936f-63cb247262dc",
+        "name": "VPDROUGHT",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "WATER POTENTIAL",
+        "id": "36816274-62db-4582-bdd9-284885b92b70",
+        "name": "WATER POTENTIAL",
+        "state": "active",
+        "vocabulary_id": null
+      }
+    ],
+    "groups": [],
+    "relationships_as_subject": [],
+    "relationships_as_object": []
+  }
+}

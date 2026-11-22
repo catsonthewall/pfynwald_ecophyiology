@@ -1,0 +1,17 @@
+<PAMDataset>
+  <Metadata>
+    <MDI key="source_asset">cdist</MDI>
+    <MDI key="source_href">https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2024/195/028/LC08_L2SP_195028_20240806_20240814_02_T1/LC08_L2SP_195028_20240806_20240814_02_T1_ST_CDIST.TIF</MDI>
+    <MDI key="source_item">LC08_L2SP_195028_20240806_02_T1</MDI>
+    <MDI key="stored_units">native source DN</MDI>
+  </Metadata>
+  <PAMRasterBand band="1">
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">171</MDI>
+      <MDI key="STATISTICS_MEAN">91.24823943662</MDI>
+      <MDI key="STATISTICS_MINIMUM">0</MDI>
+      <MDI key="STATISTICS_STDDEV">40.176181796618</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">100</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>

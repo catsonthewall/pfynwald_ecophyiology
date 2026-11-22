@@ -1,0 +1,19 @@
+{
+  "analysis_label": "Pfynwald selected acquisition remote sensing pilot",
+  "site_lon": 7.611111111111111,
+  "site_lat": 46.301944444444445,
+  "analysis_crs": "EPSG:32632",
+  "context_half_width_m": 1000,
+  "core_radius_m": 500,
+  "s2_grid_m": 20,
+  "forest_fraction_min": 0.8,
+  "s2_cloud_buffer_pixels": 1,
+  "scene_min_valid_fraction": 0.7,
+  "scene_min_pixels": 30,
+  "landsat_st_qa_max_k": 2.0,
+  "landsat_cloud_distance_min_km": 1.0,
+  "landsat_forest_interior_m": 60,
+  "field_window_minutes": 15,
+  "field_clock_offset_scenarios_hours": [0, 1, 2],
+  "note": "All thresholds are declared pilot analysis choices, not sensor specifications or validated drought thresholds. The core is a landscape buffer, not an experimental plot. Source field timezone is unresolved."
+}

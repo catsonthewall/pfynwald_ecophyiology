@@ -1,0 +1,10 @@
+messvar_id,installation_name,variable_id,varname_name,varunit_symbol,varvpos,scaffold,treatment,sensor_id,imp_name
+11569,Pfynwald,319,System operation status,number,-10,NA,NA,NA,OPERATION_STATUS
+11570,Pfynwald,314,Air relative humidity,%,-10,NA,NA,NA,RH_ic_amb
+11571,Pfynwald,314,Air relative humidity,%,-10,NA,NA,NA,RH_ic_manip
+11572,Pfynwald,315,Air temperature,degC,-10,NA,NA,NA,TA_ic_amb
+11573,Pfynwald,315,Air temperature,degC,-10,NA,NA,NA,TA_ic_manip
+11574,Pfynwald,316,Atmospheric vapour pressure deficit,kPa,-10,NA,NA,NA,VPD_ic_amb
+11575,Pfynwald,316,Atmospheric vapour pressure deficit,kPa,-10,NA,NA,NA,VPD_ic_manip
+11576,Pfynwald,317,Wind direction,deg,-10,NA,NA,NA,WD_ic
+11577,Pfynwald,318,Wind speed,m/s,-10,NA,NA,NA,WS_ic

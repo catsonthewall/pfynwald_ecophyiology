@@ -1,0 +1,221 @@
+{
+  "help": "https://www.envidat.ch/api/3/action/help_show?name=package_show",
+  "success": true,
+  "result": {
+    "author": "[{\"given_name\": \"Katrin\", \"name\": \"Meusburger\", \"email\": \"katrin.meusburger@wsl.ch\", \"data_credit\": [], \"identifier_scheme\": \"\", \"identifier\": \"0000-0003-4623-6249\", \"affiliation\": \"Forest Soils and Biogeochemistry, Swiss Federal Institute for Forest, Snow and Landscape Research WSL, Birmensdorf, Switzerland\"}, {\"given_name\": \"Christoph\", \"name\": \"Mullis\", \"email\": \"christoph.mullis@wsl.ch\", \"identifier\": \"\", \"affiliation\": \"WSL \\u2014 Swiss Federal Institute for Forest, Snow and Landscape Research\"}, {\"given_name\": \"Jonas\", \"name\": \"Gisler\", \"email\": \"jonas.gisler@wsl.ch\", \"data_credit\": [], \"identifier_scheme\": \"\", \"identifier\": \"\", \"affiliation\": \"Swiss Federal Institute for Forest Snow and Landscape Research WSL, Zuercherstrasse 111, 8903 Birmensdorf, Switzerland\"}, {\"given_name\": \"Marcus\", \"name\": \"Schaub\", \"email\": \"marcus.schaub@wsl.ch\", \"data_credit\": [], \"identifier_scheme\": \"\", \"identifier\": \"0000-0002-0158-8892\", \"affiliation\": \"Swiss Federal Institute for Forest, Snow, and Landscape WSL, CH-8903, Birmensdorf, Switzerland\"}]",
+    "author_email": null,
+    "creator_user_id": "7adc3018-86f4-481a-a55a-6f25a0dd3056",
+    "date": "[{\"date_type\":\"created\",\"date\":\"2026-05-23\",\"end_date\":\"2026-05-23\",\"date_explanation\":\"Date range during which the research data was finalized or formally created\"},{\"date_type\":\"collected\",\"date\":\"2024-01-01\",\"end_date\":\"2025-12-31\",\"date_explanation\":\"Date range during which the research data was gathered or collected.\"}]",
+    "doi": "10.16904/envidat.775",
+    "funding": "[{\"institution\":\"Swiss National Science Foundation (SNSF)\",\"grant_number\":\"206021_213382/1\",\"institution_url\":\"https://www.wsl.ch/en/projects/vpdrought/\"}]",
+    "id": "12bc2274-e48f-4ff1-8961-b86699aaa450",
+    "isopen": true,
+    "license_id": "cc-by",
+    "license_title": "Creative Commons Attribution (CC-BY 4.0)",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "maintainer": "{\"email\":\"katrin.meusburger@wsl.ch\",\"given_name\":\"Katrin\",\"name\":\"Meusburger\"}",
+    "maintainer_email": null,
+    "metadata_created": "2026-05-27T08:02:34.180182",
+    "metadata_modified": "2026-08-27T07:51:28.444977",
+    "name": "pfynwald-vpdrought-experiment-soil-parameters",
+    "notes": "### Dataset content\nContinuous soil measurements (10-min resolution) from the Pfynwald long-term irrigation experiment, covering five treatments: **control, irrigation, irrigation+VPD, roof, roof+VPD**. \nMeasurements were taken at multiple plots and at three depths (-0.1, -0.8, -1.2 m below soil surface). \nSensors include TEROS-21 (matric potential), TEROS-12 (volumetric water content), TEROS-21 (soil temperature), and TEROS-12 (electrical conductivity).\n\n### Processing steps\n\n**1. Raw retrieval** from the LWF database (`ada.v_messvar`, project `Pfynwald irrigation`), 10-min cadence.\n**2. Range filtering** to remove physically implausible values:\n   - SWP: drop values ≥ 0 kPa or ≤ −8000 kPa\n   - VWC: drop values ≤ 0 or > 0.8 m³/m³\n   - TEM: drop values > 40 °C or < −20 °C\n\n**3. Duplicate aggregation** within the same 10-min timestamp by mean (median for SWP).\n**4. Temperature correction (SWP_TC)**: matric potential is temperature-corrected using the TEROS-21 manufacturer equation referenced to T_ref = 20 °C:\n   - Convert SWP (kPa) to head h = |SWP|·10.197, then pF = log10(h)\n   - ΔpF = (919.890694·ΔT − 6.945352·ΔT²)·exp(−150.754657 / (pF + 9.153084))\n   - SWP_TC = −10^(pF + ΔpF) / 10.197\n\n**5. No gap filling applied.** Missing values remain absent from the delivered CSV.\n\n### Methods\n- Database query and aggregation: R, `data.table`, `rLWFpg`\n- Temperature correction: in-house implementation of TEROS-21 manufacturer formula\n- See repository / script reference below\n\n### Limitations\n- Values flagged out of range during step 2 are absent (not interpolated)\n- Winter periods may include frozen-soil readings — these pass the range filter as physical sensor outputs but should be interpreted with caution by downstream users\n- SWP_TC rows carry the messvar_id of the underlying SWP sensor; the corresponding TEM sensor used for correction is paired via site/plot/depth/datetime but not encoded in the messvar_id\n- Sensor calibration uses manufacturer defaults; site-specific calibration was not performed\n- Roofs were installed in spring 2024. Readings under \"roof\" / \"roof_vpd\" treatments before that reflect ambient conditions, not the experimental treatment.\n- In 2025, three additional TEROS-21 sensors were added per roofed treatment at 10 cm depth to obtain a balanced sample relative to roof position (under panels, at panel edges, and in inter-panel gaps). \n  This expansion means roofed treatments have six positions at 10 cm from 2025 onward, compared to three before.\n\n \n### Data access and additional requests\nPublic resources associated with this record can be accessed directly through EnviDat. To request additional VPDrought or LWF data—for example, other variables, time periods, temporal resolutions, raw measurements, or customized data extracts—please use the [LWF Data Request Tool](https://webapps.wsl.ch/lwf-data-request-form/). ",
+    "num_resources": 3,
+    "num_tags": 12,
+    "organization": {
+      "id": "2a86e5bb-9735-4db3-a3e0-0979196bea1a",
+      "name": "pfynwald",
+      "title": "Pfynwald",
+      "type": "organization",
+      "description": "At the beginning of this century, numerous Scots pines in the Rhone Valley, one of the driest inner alpine valleys of the European Alps, situated between Brig and Sion (Canton Valais), started showing symptoms of drought. Many older trees had already died. To investigate the causes of the pine dieback, the WSL launched a long-term irrigation experiment in the Pfyn-Finges Nature Park in summer 2003. Since then, the WSL has been comparing the responses of several hundred Scots pines in irrigated forest plots with those of trees that continued to receive only the natural amount of precipitation.\r\n\r\nSince 2024, we have implemented an additional, world-wide unique approach to disentangle the processes affected by atmospheric and soil droughts. For more details, see VPDrought-Experiment.\r\n\r\n[here is the link](https://www.wsl.ch/de/ueber-die-wsl/versuchsanlagen-und-labors/flaechen-im-wald/die-forschungsplattform-pfynwald/)",
+      "image_url": "",
+      "created": "2026-04-09T08:06:02.775312",
+      "is_organization": true,
+      "approval_status": "approved",
+      "state": "active"
+    },
+    "owner_org": "2a86e5bb-9735-4db3-a3e0-0979196bea1a",
+    "private": false,
+    "publication": "{\"publisher\":\"EnviDat\",\"publication_year\":\"2026\"}",
+    "publication_state": "published",
+    "related_datasets": "- [Pfynwald long-term experimental irrigation site](https://www.doi.org/10.16904/envidat.599)\n- [Pfynwald VPDrought experiment atmospheric parameters and manipulations](https://www.doi.org/10.16904/envidat.798)\n- [Pfynwald VPDrought experiment stem radius changes (TreeNet)](https://www.doi.org/10.16904/envidat.751)\n- [Pfynwald VPDrought experiment sap flow parameters](https://www.doi.org/10.16904/envidat.750)\n- [Pfynwald VPDrought experiment canopy temperature parameters](https://www.doi.org/10.16904/envidat.776)",
+    "related_publications": "",
+    "resource_type": "dataset",
+    "resource_type_general": "dataset",
+    "spatial": "{\"type\":\"GeometryCollection\",\"geometries\":[{\"type\":\"Point\",\"coordinates\":[7.6121082,46.3027884]}]}",
+    "state": "active",
+    "subtitle": "",
+    "title": "Pfynwald VPDrought experiment soil parameters",
+    "type": "dataset",
+    "url": null,
+    "version": "",
+    "extras": [
+      {
+        "key": "deprecatedResources",
+        "value": "[]"
+      }
+    ],
+    "resources": [
+      {
+        "cache_last_updated": null,
+        "cache_url": null,
+        "created": "2026-08-27T07:50:00",
+        "description": "### Data access and additional requests\nPublic resources associated with this record can be accessed directly through EnviDat. To request additional VPDrought or LWF data—for example, other variables, time periods, temporal resolutions, raw measurements, or customized data extracts—please use the [LWF Data Request Tool](https://webapps.wsl.ch/lwf-data-request-form/). ",
+        "doi": "",
+        "format": "url",
+        "hash": "",
+        "id": "37fbb0de-9301-45b7-9255-923fd8c4ef98",
+        "last_modified": "2026-08-27T09:51:27.619000",
+        "metadata_modified": "2026-08-27T07:51:27.982705",
+        "mimetype": null,
+        "mimetype_inner": null,
+        "name": "Data request form",
+        "package_id": "12bc2274-e48f-4ff1-8961-b86699aaa450",
+        "position": 0,
+        "resource_size": "{\"size_value\":\"1\",\"size_units\":\"b\"}",
+        "resource_type": null,
+        "restricted": "{\"level\": \"public\", \"allowed_users\": \"\"}",
+        "size": 1,
+        "state": "active",
+        "url": "https://webapps.wsl.ch/lwf-data-request-form/",
+        "url_type": null
+      },
+      {
+        "cache_last_updated": null,
+        "cache_url": null,
+        "created": "2026-05-27T08:04:00",
+        "description": "",
+        "doi": "",
+        "format": "ZIP",
+        "hash": "",
+        "id": "3606ad5b-f308-4bfc-8aa4-db5b017ee47a",
+        "last_modified": null,
+        "metadata_modified": "2026-08-27T07:51:27.982834",
+        "mimetype": "application/zip",
+        "mimetype_inner": "null",
+        "name": "pfynwald_vpdrought_soil_10Minutes_2024.zip",
+        "package_id": "12bc2274-e48f-4ff1-8961-b86699aaa450",
+        "position": 1,
+        "resource_size": "{\"size_value\":\"56.29\",\"size_units\":\"mb\"}",
+        "resource_type": "null",
+        "restricted": "{\"level\": \"public\", \"allowed_users\": \"\"}",
+        "size": 59024343,
+        "state": "active",
+        "url": "https://www.envidat.ch/dataset/12bc2274-e48f-4ff1-8961-b86699aaa450/resource/3606ad5b-f308-4bfc-8aa4-db5b017ee47a/download/pfynwald_vpdrought_soil_10minutes_2024.zip",
+        "url_type": "upload"
+      },
+      {
+        "cache_last_updated": null,
+        "cache_url": null,
+        "created": "2026-05-27T08:05:00",
+        "description": "",
+        "doi": "",
+        "format": "ZIP",
+        "hash": "",
+        "id": "edaa3e3a-1045-4d2f-952f-e23689c20bb9",
+        "last_modified": null,
+        "metadata_modified": "2026-08-27T07:51:27.982975",
+        "mimetype": "application/zip",
+        "mimetype_inner": "null",
+        "name": "pfynwald_vpdrought_soil_10Minutes_2025.zip",
+        "package_id": "12bc2274-e48f-4ff1-8961-b86699aaa450",
+        "position": 2,
+        "resource_size": "{\"size_value\":\"63.13\",\"size_units\":\"mb\"}",
+        "resource_type": "null",
+        "restricted": "{\"level\": \"public\", \"allowed_users\": \"\"}",
+        "size": 66196603,
+        "state": "active",
+        "url": "https://www.envidat.ch/dataset/12bc2274-e48f-4ff1-8961-b86699aaa450/resource/edaa3e3a-1045-4d2f-952f-e23689c20bb9/download/pfynwald_vpdrought_soil_10minutes_2025.zip",
+        "url_type": "upload"
+      }
+    ],
+    "tags": [
+      {
+        "display_name": "DROUGHT EXPERIMENT",
+        "id": "0984d92e-2c91-4a1a-a43e-bc54ccc21e9a",
+        "name": "DROUGHT EXPERIMENT",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "ELECTRICAL CONDUCTIVITY",
+        "id": "97168365-dcd0-462b-87de-c6cecf6be777",
+        "name": "ELECTRICAL CONDUCTIVITY",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "IRRIGATION",
+        "id": "1a648ed1-22b5-43f3-afb1-42a4a0dca95f",
+        "name": "IRRIGATION",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "IRRIGATION MANIPULATION",
+        "id": "1f03a64d-e6dc-4937-a30e-f052f06d262e",
+        "name": "IRRIGATION MANIPULATION",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "PFYNWALD",
+        "id": "a64b32a3-f62d-42e3-a216-7edf41398b0a",
+        "name": "PFYNWALD",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "PINUS SYLVESTRIS",
+        "id": "9ceddae3-18b3-4ba8-bcce-2ea3ce4a3bbe",
+        "name": "PINUS SYLVESTRIS",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "SOIL MOISTURE",
+        "id": "97c56aa9-cbb2-4c0e-b41f-cf368a3990d0",
+        "name": "SOIL MOISTURE",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "SOIL TEMPERATURE",
+        "id": "a587f40d-320d-4ec1-84a9-51110fa3aa06",
+        "name": "SOIL TEMPERATURE",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "TEROS-12",
+        "id": "80ca4420-05ae-46c7-95b1-d3d688bdfa16",
+        "name": "TEROS-12",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "TEROS-21",
+        "id": "e525e636-1470-40b3-bb31-e7b4999dad0d",
+        "name": "TEROS-21",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "VPDROUGHT",
+        "id": "e8b13462-b140-4bde-936f-63cb247262dc",
+        "name": "VPDROUGHT",
+        "state": "active",
+        "vocabulary_id": null
+      },
+      {
+        "display_name": "WATER POTENTIAL",
+        "id": "36816274-62db-4582-bdd9-284885b92b70",
+        "name": "WATER POTENTIAL",
+        "state": "active",
+        "vocabulary_id": null
+      }
+    ],
+    "groups": [],
+    "relationships_as_subject": [],
+    "relationships_as_object": []
+  }
+}
